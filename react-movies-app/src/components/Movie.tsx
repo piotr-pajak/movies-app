@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import { ReactComponent as StarIcon } from "../assets/icons/star.svg";
 
 const IMAGE_API = "https://image.tmdb.org/t/p/w1280";
+
 const MovieOverview = styled.div`
   position: absolute;
   right: 0;
@@ -34,13 +36,16 @@ const MovieThumbnail = styled.img`
 `;
 const MovieHeader = styled.div`
   font-size: 14px;
-  font-weight: 400;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 12px;
   color: white;
+  & h3 {
+    font-size: 14px;
+    font-weight: 500;
+  }
 `;
 
 const OverviewTitle = styled.h2`
@@ -48,6 +53,12 @@ const OverviewTitle = styled.h2`
   font-weight: bold;
 `;
 
+const Vote = styled.span`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap:4px;
+`
 type MovieProps = {
   title: string;
   poster_path: string;
@@ -65,7 +76,10 @@ const Movie = ({ title, poster_path, overview, vote_average }: MovieProps) => {
       <MovieThumbnail src={IMAGE_API + poster_path} alt={title} title={title} />
       <MovieHeader>
         <h3>{title}</h3>
-        <span>{vote_average}</span>
+        <Vote>
+          <StarIcon />
+          {vote_average}
+        </Vote>
       </MovieHeader>
     </MovieCard>
   );
