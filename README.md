@@ -18,7 +18,7 @@ then run installation command:
 ```sh
     yarn
 ```
-then launch app
+finally launch app
 ```sh
     yarn dev
 ```
