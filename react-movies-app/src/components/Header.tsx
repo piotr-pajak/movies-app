@@ -7,6 +7,29 @@ const SEARCH_API =
 type HeaderProps = {
   setMovies: any;
 };
+
+const AppHeader = styled.header`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+`;
+
+const Heading = styled.a`
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+`;
+
+const SearchBar = styled.input`
+  background-color: #18181b;
+  padding: 8px;
+  border: 1px solid #fff;
+  border-radius: 1.125rem;
+  margin-bottom: 16px;
+  color: #fff;
+`;
+
 const Header = ({ setMovies }: HeaderProps) => {
   const [searchPath, setSearchPath] = useState("");
 
@@ -28,27 +51,6 @@ const Header = ({ setMovies }: HeaderProps) => {
     setSearchPath(event.target.value);
   };
 
-  const AppHeader = styled.header`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #fff;
-  `;
-
-  const Heading = styled.a`
-    text-decoration: none;
-    color: white;
-    cursor: pointer;
-  `;
-
-  const SearchBar = styled.input`
-    background-color: #18181b;
-    padding: 8px;
-    border: 1px solid #fff;
-    border-radius: 1.125rem;
-    margin-bottom: 16px;
-    color: #fff;
-  `;
   return (
     <AppHeader>
       <Heading href="/">

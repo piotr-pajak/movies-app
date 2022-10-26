@@ -6,7 +6,16 @@ import Footer from "./components/Footer";
 
 const MOVIE_API =
   "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=b8af790abfa74b6dbae4a5f61dbcd725";
+const AppWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+`;
 
+const MoviesWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
 function App() {
   const [movies, setMovies] = useState<any[]>([]);
 
@@ -14,21 +23,10 @@ function App() {
     fetch(MOVIE_API)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setMovies(data.results);
       });
   }, []);
 
-  const AppWrapper = styled.div`
-    width: 100%;
-    height: 100%;
-  `;
-
-  const MoviesWrapper = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  `;
   return (
     <AppWrapper>
       <Header setMovies={setMovies} />

@@ -2,13 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const IMAGE_API = "https://image.tmdb.org/t/p/w1280";
-
-type MovieProps = {
-  title: string;
-  poster_path: string;
-  overview: string;
-  vote_average: number;
-};
 const MovieOverview = styled.div`
   position: absolute;
   right: 0;
@@ -54,6 +47,14 @@ const OverviewTitle = styled.h2`
   padding: 8px 0;
   font-weight: bold;
 `;
+
+type MovieProps = {
+  title: string;
+  poster_path: string;
+  overview: string;
+  vote_average: number;
+};
+
 const Movie = ({ title, poster_path, overview, vote_average }: MovieProps) => {
   return (
     <MovieCard>
