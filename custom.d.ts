@@ -4,3 +4,14 @@ declare module '*.svg' {
     const src: string;
     export default src;
 }
+
+type MovieProps = {
+    title: string;
+    poster_path: string;
+    overview: string;
+    vote_average: number;
+};
+
+type HeaderProps = {
+    setMovies: any;
+};

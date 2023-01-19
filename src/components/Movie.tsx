@@ -62,13 +62,6 @@ const Vote = styled.span`
   column-gap:4px;
 `
 
-type MovieProps = {
-  title: string;
-  poster_path: string;
-  overview: string;
-  vote_average: number;
-};
-
 const Movie = ({ title, poster_path, overview, vote_average }: MovieProps) => {
   return (
     <MovieCard>
