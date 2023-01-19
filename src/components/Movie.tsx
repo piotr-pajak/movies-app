@@ -10,9 +10,10 @@ const MovieOverview = styled.div`
   bottom: 0;
   left: 0;
   height: 100%;
-  transform: translateX(100%);
-  background-color: #fff;
-  color: #171717;
+  backdrop-filter: blur(12px);
+  text-shadow: 2px 2px 4px #000;
+  opacity: 0;
+  color: #FFF;
   padding: 8px;
   overflow: auto;
   max-height: 100%;
@@ -27,8 +28,8 @@ const MovieCard = styled.div`
   background-color: #3f3f46;
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   &:hover ${MovieOverview} {
-    transition: transform 300ms ease-in-out;
-    transform: translateX(0);
+    transition-duration: 500ms;
+    opacity: 100;
   }
 `;
 
@@ -39,6 +40,7 @@ const MovieThumbnail = styled.img`
 const MovieHeader = styled.div`
   font-size: 14px;
   display: flex;
+  gap: 12px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
