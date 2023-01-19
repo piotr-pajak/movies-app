@@ -28,14 +28,14 @@ const SearchBar = styled.input`
 const Header = ({ setMovies }: HeaderProps) => {
   const [searchPath, setSearchPath] = useState("");
 
-  const handleOnSubmit = (event: any) => {
+  const handleOnSubmit = (event: { preventDefault: () => void; }) => {
     event.preventDefault();
 
     if (searchPath) {
       fetch(SEARCH_API + searchPath)
         .then((response) => response.json())
         .then((data) => {
-          setMovies(data.results);
+            setMovies(data.results);
         });
 
       setSearchPath("");

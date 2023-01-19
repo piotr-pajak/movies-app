@@ -19,10 +19,9 @@ const MoviesWrapper = styled.div`
 
 function App() {
   const [movies, setMovies] = useState<any[]>([]);
-
   useEffect(() => {
     fetch(MOVIE_API)
-      .then(res => res.json())
+      .then(response => response.json())
       .then(data => {
         setMovies(data.results);
       });
@@ -32,8 +31,7 @@ function App() {
     <AppWrapper>
       <Header setMovies={setMovies} />
       <MoviesWrapper>
-        {movies.length > 0 &&
-          movies.map((movie) => <Movie key={movie.id} {...movie} />)}
+        {movies.length > 0 && movies.map((movie) => <Movie key={movie.id} {...movie} />)}
       </MoviesWrapper>
       <Footer />
     </AppWrapper>

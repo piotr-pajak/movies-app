@@ -1,7 +1,12 @@
 {
   "name": "react-movies-app",
+  "author": "Piotr Pająk",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mGlok/movies-app"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -80,4 +80,5 @@ const Movie = ({ title, poster_path, overview, vote_average }: MovieProps) => {
     </MovieCard>
   );
 };
+
 export default Movie;
