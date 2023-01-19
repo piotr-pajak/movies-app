@@ -17,6 +17,7 @@ const MovieOverview = styled.div`
   overflow: auto;
   max-height: 100%;
 `;
+
 const MovieCard = styled.div`
   width: 250px;
   position: relative;
@@ -34,6 +35,7 @@ const MovieCard = styled.div`
 const MovieThumbnail = styled.img`
   max-width: 100%;
 `;
+
 const MovieHeader = styled.div`
   font-size: 14px;
   display: flex;
@@ -59,6 +61,7 @@ const Vote = styled.span`
   align-items: center;
   column-gap:4px;
 `
+
 type MovieProps = {
   title: string;
   poster_path: string;

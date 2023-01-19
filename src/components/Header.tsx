@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { useState } from "react";
 
-const SEARCH_API =
-  "https://api.themoviedb.org/3/search/movie?&api_key=b8af790abfa74b6dbae4a5f61dbcd725&query=";
+const SEARCH_API = "https://api.themoviedb.org/3/search/movie?&api_key=b8af790abfa74b6dbae4a5f61dbcd725&query=";
 
 type HeaderProps = {
   setMovies: any;

@@ -4,8 +4,8 @@ import styled from "styled-components";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-const MOVIE_API =
-  "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=b8af790abfa74b6dbae4a5f61dbcd725";
+const MOVIE_API = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=b8af790abfa74b6dbae4a5f61dbcd725";
+
 const AppWrapper = styled.div`
   width: 100%;
   height: 100%;
@@ -16,13 +16,14 @@ const MoviesWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
 `;
+
 function App() {
   const [movies, setMovies] = useState<any[]>([]);
 
   useEffect(() => {
     fetch(MOVIE_API)
-      .then((res) => res.json())
-      .then((data) => {
+      .then(res => res.json())
+      .then(data => {
         setMovies(data.results);
       });
   }, []);

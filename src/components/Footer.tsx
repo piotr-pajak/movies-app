@@ -9,6 +9,7 @@ const AppFooter = styled.footer`
   padding: 1rem 0;
   color: white;
 `;
+
 const Link = styled.a`
   text-decoration: none;
   color: white;
@@ -24,7 +25,7 @@ const Footer = () => {
       </p>
       <p>
         API used:{" "}
-        <Link href="https://www.themoviedb.org/" title="The Movie Database ">
+        <Link href="https://www.themoviedb.org/" title="The Movie Database">
           TMDB
         </Link>
       </p>
