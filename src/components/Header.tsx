@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import { useState } from "react";
+import React, { useState } from "react";
 
-const SEARCH_API = "https://api.themoviedb.org/3/search/movie?&api_key=b8af790abfa74b6dbae4a5f61dbcd725&query=";
+const SEARCH_API =
+  "https://api.themoviedb.org/3/search/movie?&api_key=b8af790abfa74b6dbae4a5f61dbcd725&query=";
 
 const AppHeader = styled.header`
   display: flex;
@@ -28,21 +29,25 @@ const SearchBar = styled.input`
 const Header = ({ setMovies }: HeaderProps) => {
   const [searchPath, setSearchPath] = useState("");
 
-  const handleOnSubmit = (event: { preventDefault: () => void; }) => {
+  const handleOnSubmit = (event: { preventDefault: () => void }) => {
     event.preventDefault();
 
     if (searchPath) {
-      fetch(SEARCH_API + searchPath)
-        .then((response) => response.json())
-        .then((data) => {
-            setMovies(data.results);
-        });
+      (async () => {
+        try {
+          const response = await fetch(SEARCH_API + searchPath);
+          const data = await response.json();
+          setMovies(data.results);
+        } catch (error) {
+          console.error(error);
+        }
+      })();
 
       setSearchPath("");
     }
   };
 
-  const handleOnChange = (event: any) => {
+  const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchPath(event.target.value);
   };
 

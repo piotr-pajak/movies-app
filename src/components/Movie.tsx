@@ -13,7 +13,7 @@ const MovieOverview = styled.div`
   backdrop-filter: blur(12px);
   text-shadow: 2px 2px 4px #000;
   opacity: 0;
-  color: #FFF;
+  color: #fff;
   padding: 8px;
   overflow: auto;
   max-height: 100%;
@@ -61,8 +61,8 @@ const Vote = styled.span`
   display: flex;
   flex-direction: row;
   align-items: center;
-  column-gap:4px;
-`
+  column-gap: 4px;
+`;
 
 const Movie = ({ title, poster_path, overview, vote_average }: MovieProps) => {
   return (
