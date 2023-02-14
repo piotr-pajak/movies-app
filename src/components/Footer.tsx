@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const AppFooter = styled.footer`
+const StyledFooter = styled.footer`
   font-size: 1.25rem;
   width: 100%;
   display: flex;
@@ -10,7 +10,7 @@ const AppFooter = styled.footer`
   color: white;
 `;
 
-const Link = styled.a`
+const StyledLink = styled.a`
   text-decoration: none;
   color: white;
   cursor: pointer;
@@ -19,17 +19,27 @@ const Link = styled.a`
 
 const Footer = () => {
   return (
-    <AppFooter>
+    <StyledFooter>
       <p>
-        Author: <Link href="https://programistapiotr.pl/">Piotr Pająk</Link>
+        Author:{" "}
+        <StyledLink
+          href="https://programistapiotr.pl/"
+          title="Go to my website"
+          target="_blank"
+        >
+          Piotr Pająk
+        </StyledLink>
       </p>
       <p>
         API used:{" "}
-        <Link href="https://www.themoviedb.org/" title="The Movie Database">
+        <StyledLink
+          href="https://www.themoviedb.org/"
+          title="The Movie Database"
+        >
           TMDB
-        </Link>
+        </StyledLink>
       </p>
-    </AppFooter>
+    </StyledFooter>
   );
 };
 export default Footer;

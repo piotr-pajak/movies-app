@@ -17,6 +17,7 @@ const MovieOverview = styled.div`
   padding: 8px;
   overflow: auto;
   max-height: 100%;
+  transition: opacity 500ms ease-out;
 `;
 
 const MovieCard = styled.div`

@@ -24,5 +24,5 @@ type MovieProps = {
 };
 
 type HeaderProps = {
-  setMovies: any;
+  setMovies: React.Dispatch<React.SetStateAction<Movie[]>>;
 };

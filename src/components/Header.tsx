@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const SEARCH_API =
   "https://api.themoviedb.org/3/search/movie?&api_key=b8af790abfa74b6dbae4a5f61dbcd725&query=";
 
-const AppHeader = styled.header`
+const StyledHeader = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,7 +52,7 @@ const Header = ({ setMovies }: HeaderProps) => {
   };
 
   return (
-    <AppHeader>
+    <StyledHeader>
       <Heading href="/">
         <h1>Movies App</h1>
       </Heading>
@@ -64,7 +64,7 @@ const Header = ({ setMovies }: HeaderProps) => {
           onChange={handleOnChange}
         />
       </form>
-    </AppHeader>
+    </StyledHeader>
   );
 };
 export default Header;
