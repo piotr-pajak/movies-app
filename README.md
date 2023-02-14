@@ -31,6 +31,7 @@ yarn preview
 ```
 The application will be available at http://localhost:4173.
 
+Alternatively, you can also view the application live at: https://piotr-pajak-movies-app.netlify.app/
 ### Description
 The application allows you to download movies list from The Movie Database.
 After downloading the movies, the application displays their thumbnails, titles and ratings. 
