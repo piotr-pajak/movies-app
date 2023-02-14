@@ -1,25 +1,37 @@
-# Movies App
-Simple app that downloads movies from The Movie Database and filters them.
+# Technologies
+The application was created using the following technologies:
 
-Used API: The Movie Database , https://www.themoviedb.org/
+ - Vite
+ - React
+ - TypeScript
+ - Styled Components
+ 
+## Running the application
+To run the application, follow these steps:
 
-Tech: Vite, React, Typescript, Styled components
-## How to start the application:
-First, clone the repository
+Clone the repository:
 ```sh
-    git clone https://github.com/mGlok/movies-app/
+git clone https://github.com/mGlok/movies-app/
 ```
-Enter to the application folder
+Navigate to the application folder:
 ```sh
-    cd movies-app
-    cd react-movies-app
+cd movies-app/react-movies-app
 ```
-Secondly run installation command:
+Install dependencies:
 ```sh
-    yarn
+yarn
 ```
-finally launch app.
+Build the application:
 ```sh
-    yarn dev
+yarn build
 ```
-App will be available at `localhost:3000`.
+Launch the application:
+```sh
+yarn preview
+```
+The application will be available at http://localhost:4173.
+
+### Description
+The application allows you to download movies list from The Movie Database.
+After downloading the movies, the application displays their thumbnails, titles and ratings. 
+When a user hovers over a movie, they can see its title and description.
